@@ -6,8 +6,9 @@ phases:
      - echo TEST
  build:
    commands:
-     - echo Build started on `date`
-     - echo Installing composer deps
+     # Docker Hub へのログイン
+     - echo Logging in to Docker Hub...
+     - echo $DOCKERHUB_PASS | docker login -u $DOCKERHUB_USER --password-stdin
      - docker run hello-world
 
  post_build:
