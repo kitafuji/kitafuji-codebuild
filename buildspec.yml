@@ -1,4 +1,9 @@
 version: 0.2
+
+phase:
+ pre_build:
+   commands:
+     - echo TEST
  build:
    commands:
      - echo Build started on `date`
